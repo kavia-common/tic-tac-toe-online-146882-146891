@@ -1,82 +1,38 @@
-# Lightweight React Template for KAVIA
+# Tic Tac Toe – Ocean Professional (React)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern, minimal Tic Tac Toe game built with React and styled using the Ocean Professional theme (blue & amber accents, subtle shadows, rounded corners, smooth transitions).
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Two modes: Player vs Player and Player vs AI (basic strategy)
+- Clean separation of components: Board, Square, Controls, Game Mode Selector, Status
+- Visual emphasis for:
+  - Winning state (highlighted line)
+  - Player turn (accent pill)
+  - Reset action (gradient accent button)
+- Accessible: ARIA roles/labels, status updates via aria-live
+- Responsive layout and fluid typography
 
-## Getting Started
+## Quick Start
 
-In the project directory, you can run:
+- Install dependencies: `npm install`
+- Start dev server: `npm start` (http://localhost:3000)
+- Run tests: `npm test`
+- Build for production: `npm run build`
 
-### `npm start`
+## Structure
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/App.js` – Main app, game state and components
+- `src/App.css` – Theme variables and modern UI styling
+- `src/index.js`, `src/index.css` – Entry and base styles
 
 ## Customization
 
-### Colors
+Theme colors defined in `App.css` under `:root` with variables:
+- `--primary` (blue), `--secondary` (amber), `--error` (red), `--bg`, `--surface`, `--text`, `--text-subtle`, `--border`, `--focus`
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+You can tweak spacing, border radii, and shadow values for a sharper or softer aesthetic.
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+## Notes
 
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+No backend integration required. All logic is client-side.
